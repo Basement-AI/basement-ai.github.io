@@ -6,10 +6,10 @@ hr { border-color: #3d85c6; border-width: 3px; max-width: 50px; }
 
 hr.light { border-color: white; }
 
-a { -webkit-transition: all 0.35s; -moz-transition: all 0.35s; transition: all 0.35s; color: #777; }
+a { -webkit-transition: all 0.35s; -moz-transition: all 0.35s; transition: all 0.35s; }
 a:hover, a:focus { color: #2f6ba1; }
 
-#about a .fa { color: white; }
+#about a .fa { color: primary; }
 
 #about a:hover .fa { color: #e6e6e6; }
 
