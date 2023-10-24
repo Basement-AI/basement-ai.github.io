@@ -43,5 +43,12 @@ $theme-dark: #212121;
         "base"
 ;
 
+// importing core styling file
+@import "../fontawesome/scss/fontawesome.scss";
+
+// our project needs Solid + Brands
+@import "../fontawesome/scss/solid.scss";
+@import "../fontawesome/scss/brands.scss";
+
 header .header-content .header-content-inner h1 { font-weight: 100; text-transform: none; margin-top: 0; margin-bottom: 0;  color: #3d85c6;}
 header .header-content .header-content-inner span { font-weight: 200; margin-top: 0; margin-bottom: 0; color: white; }
