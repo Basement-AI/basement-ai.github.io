@@ -50,9 +50,5 @@ $theme-dark: #212121;
 @import "../fontawesome/scss/solid.scss";
 @import "../fontawesome/scss/brands.scss";
 
-// header .header-content .header-content-inner h1 {
-//        font-family: Pacifico; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
-//        color: #fff;
-//    }
-header .header-content .header-content-inner h1 {font-weight: 100; text-transform: none; margin-top: 0; margin-bottom: 0;  color: #3d85c6;}
-header .header-content .header-content-inner a { color: white; }
+header .header-content .header-content-inner h1 { font-weight: 100; text-transform: none; margin-top: 0; margin-bottom: 0;  color: #3d85c6;}
+header .header-content .header-content-inner span { font-weight: 200; margin-top: 0; margin-bottom: 0; color: white; }
