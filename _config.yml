@@ -1,14 +1,14 @@
 # Site settings
-title: Aarne Talman
-email: aarne@basement.ai
+title: Basement AI
+email: info@basement.ai
 description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
-twitter_username: aarnetalman
-linkedin_username: talman
-instagram_username:
-facebook_username:
+twitter_username: basement_ai
+linkedin_username: basement-ai
+instagram_username: basement_ai
+facebook_username: 
 
 # Build settings
 markdown: kramdown
