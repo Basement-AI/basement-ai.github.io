@@ -45,6 +45,15 @@ a {
     }
 }
 
+#resources a {
+    @include transition-all;
+    color: rgba(white, .7);
+    &:hover,
+    &:focus {
+        color: darken(white, 10%);
+    }
+}
+
 h1,
 h2,
 h3,
