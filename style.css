@@ -1,13 +1,13 @@
 :root {
-  --primary: #8b5cf6;
-  --primary-dark: #7c3aed;
-  --primary-light: #a78bfa;
-  --secondary: #fbbf24;
-  --accent: #f472b6;
-  --text-primary: #f8fafc;
+  --primary: #38bdf8;         /* Sky Blue */
+  --primary-dark: #0ea5e9;
+  --primary-light: #7dd3fc;
+  --secondary: #14b8a6;       /* Teal */
+  --accent: #f472b6;          /* Keep for visual contrast */
+  --text-primary: #f1f5f9;
   --text-secondary: #cbd5e1;
   --text-muted: #94a3b8;
-  --bg-primary: #0f172a;
+  --bg-primary: #0f172a;      /* Keep for deep dark base */
   --bg-secondary: #1e293b;
   --bg-tertiary: #334155;
   --border: #475569;
@@ -15,9 +15,9 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.45), 0 8px 10px -6px rgb(0 0 0 / 0.35);
-  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #f472b6 100%);
-  --gradient-secondary: linear-gradient(135deg, #fbbf24 0%, #f87171 100%);
-  --gradient-accent: linear-gradient(135deg, #a78bfa 0%, #22d3ee 100%);
+  --gradient-primary: linear-gradient(135deg, #38bdf8 0%, #7dd3fc 100%);
+  --gradient-secondary: linear-gradient(135deg, #14b8a6 0%, #67e8f9 100%);
+  --gradient-accent: linear-gradient(135deg, #f472b6 0%, #fb7185 100%);
 }
 
 * {
@@ -66,14 +66,23 @@ body {
   padding: 1rem 0;
 }
 
+
 .logo {
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary);
   text-decoration: none;
-  display: flex;
-  align-items: center;
+  gap: 0.5rem;
 }
+
+.logo-icon {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
 
 .nav-links {
   display: flex;

@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Canvas setup
 const canvas = document.getElementById("particles-canvas");
 const ctx = canvas.getContext("2d");
 
@@ -134,7 +135,7 @@ function drawConnections() {
     for (const { node: b, dist } of nearest) {
       ctx.beginPath();
       const opacity = 1 - dist / CONNECT_DISTANCE;
-      ctx.strokeStyle = `rgba(167,139,250,${opacity})`;
+      ctx.strokeStyle = `rgba(125, 211, 252, ${opacity})`; // new primary-light (sky blue)
       ctx.lineWidth = a.activated > 0 || b.activated > 0 ? 1 : 0.5;
       ctx.moveTo(a.x, a.y);
       ctx.lineTo(b.x, b.y);
@@ -153,7 +154,7 @@ function drawFormulas() {
   ctx.textBaseline = "middle";
   for (let f of formulaSprites) {
     const pulse = f.activated > 0 ? 1.0 : f.opacity;
-    const color = f.activated > 0 ? "#ffffff" : "#a78bfa";
+    const color = f.activated > 0 ? "#ffffff" : "#7dd3fc";
 
     ctx.font = `${f.fontSize}px JetBrains Mono, monospace`;
     ctx.fillStyle = `rgba(255,255,255,${pulse})`;
@@ -184,7 +185,7 @@ function drawFirings() {
     const progress = f.lifetime / 30;
     const opacity = Math.max(0, 0.4 - progress);
     ctx.beginPath();
-    ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
+    ctx.strokeStyle = `rgba(125, 211, 252, ${opacity})`; // electric-like
     ctx.lineWidth = 1.5 - progress;
     ctx.moveTo(f.x1, f.y1);
     ctx.lineTo(f.x2, f.y2);
@@ -194,7 +195,6 @@ function drawFirings() {
   }
 }
 
-// Collision detection
 function checkFormulaNodeCollisions() {
   for (const f of formulaSprites) {
     for (const n of nodes) {
@@ -222,7 +222,7 @@ function animate() {
     ctx.beginPath();
     ctx.fillStyle = n.activated > 0 ? "rgba(255,255,255,1)" : "rgba(255,255,255,0.9)";
     ctx.shadowBlur = n.activated > 0 ? 6 : 0;
-    ctx.shadowColor = "#a78bfa";
+    ctx.shadowColor = "#7dd3fc";
     ctx.arc(n.x, n.y, n.radius + (n.activated > 0 ? 1.5 : 0), 0, Math.PI * 2);
     ctx.fill();
     ctx.shadowBlur = 0;
@@ -240,4 +240,3 @@ function animate() {
 }
 
 animate();
-
