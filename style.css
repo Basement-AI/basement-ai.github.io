@@ -118,11 +118,15 @@ body {
 }
 
 #particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: block;
-  filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.3));
+  z-index: 1;
 }
+
 
 
 
